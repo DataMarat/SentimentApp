@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: sentiment-app
-          image: localhost:32775/sentiment-app:1.0.0
-          imagePullPolicy: Always
+          image: maratdoc/sentiment-app:1.0.0
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
