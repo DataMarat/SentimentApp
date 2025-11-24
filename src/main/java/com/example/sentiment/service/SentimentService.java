@@ -12,7 +12,7 @@ public class SentimentService {
 
         String lower = text.toLowerCase();
 
-        if (lower.contains("good") || lower.contains("great") || lower.contains("excellent")
+        if (lower.contains("good") || lower.contains("great") || lower.contains("excellent") || lower.contains("hello")
                 || lower.contains("супер") || lower.contains("отлично") || lower.contains("круто")) {
             return "positive";
         }
