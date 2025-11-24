@@ -3,6 +3,10 @@ kind: Service
 metadata:
   name: sentiment-app-service
   namespace: sentiment-app
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/path: "/actuator/prometheus"
+    prometheus.io/port: "80"
 spec:
   type: LoadBalancer
   selector:
