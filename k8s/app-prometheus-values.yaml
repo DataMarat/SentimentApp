@@ -1,0 +1,9 @@
+server:
+  extraScrapeConfigs:
+    - job_name: 'sentiment-app'
+      scrape_interval: 15s
+      metrics_path: /actuator/prometheus
+      scheme: http
+      static_configs:
+        - targets:
+            - 'sentiment-app-service.sentiment-app.svc.cluster.local:80'
